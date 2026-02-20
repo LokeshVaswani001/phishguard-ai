@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ result }}</h1>
+
+        {% if url %}
+            <p><strong>URL Checked:</strong> {{ url }}</p>
+
+            <div class="progress-bar">
+                <div class="progress-fill"
+                     style="width: {{ probability }}%; background-color: {{ bar_color }};">
+                    {{ probability }}%
+                </div>
+            </div>
+        {% endif %}
+
+        <br><br>
+        <a href="/">Analyze Another Website</a>
+    </div>
+</body>
+</html>
